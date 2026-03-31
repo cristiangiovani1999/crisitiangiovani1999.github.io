@@ -23,31 +23,36 @@
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="Img/banner1.jpg" class="d-block w-100" alt="Cão feliz no banho">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Bem-vindo ao Amigo Fiel</h5>
-                    <p id="msg-boas-vendas"></p> </div>
+                <img src="Img/banner1.jpg" class="d-block w-100 img-fluid" alt="Cão feliz correndo no parque" style="height: 50vh; object-fit: cover; filter: brightness(60%);">
+                
+                <div class="carousel-caption d-flex flex-column justify-content-center h-100">
+                    <h5 class="display-4 fw-bold text-white">Bem-vindo ao Amigo Fiel</h5>
+                    <p id="msg-boas-vendas" class="lead fs-3 text-white fw-semibold"></p> </div>
             </div>
         </div>
     </div>
 
     <main class="container my-5">
-        <section id="servicos" class="mb-5">
-            <h2 class="text-center mb-4">Nossos Serviços</h2>
-            <div class="row text-center">
-                <div class="col-md-6">
-                    <img src="Img/Serviços.png" alt="Ilustração de banho e tosa" width="150">
-                    <h3>Banho e Tosa</h3>
-                    <p>O melhor cuidado para o seu pet.</p>
+        <section id="servicos" class="mb-5 py-4 bg-white rounded shadow-sm">
+            <h2 class="text-center mb-5 display-5 text-primary">Nossos Serviços</h2>
+            
+            <div class="row g-4 text-center justify-content-center">
+                
+                <div class="col-12 col-md-5 product-card p-3">
+                    <img src="Img/Serviços.png" alt="Cachorro feliz recebendo banho e tosa" class="img-fluid mb-3 rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+                    <h3 class="h4 text-secondary">Banho e Tosa</h3>
+                    <p class="text-muted">O melhor cuidado e carinho para o seu pet, com profissionais qualificados.</p>
                 </div>
-                <div class="col-md-6">
-                    <img src="Img/entrega.png" alt="Ícone de tele-busca" width="150">
-                    <h3>Tele-busca</h3>
-                    <p>Buscamos e entregamos com segurança.</p>
+
+                <div class="col-12 col-md-5 product-card p-3">
+                    <img src="Img/entrega.png" alt="Ícone de tele-busca com uma van de entrega" class="img-fluid mb-3" style="width: 150px;">
+                    <h3 class="h4 text-secondary">Tele-busca</h3>
+                    <p class="text-muted">Buscamos e entregamos seu amigo com segurança e conforto no horário agendado.</p>
                 </div>
+
             </div>
         </section>
-
+        
         <section id="cadastro" class="bg-light p-4 rounded shadow">
             <h2 class="mb-4">Cadastro e Agendamento</h2>
             <form id="formPet" class="row g-3">
