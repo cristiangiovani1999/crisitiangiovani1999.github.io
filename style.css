@@ -1,0 +1,20 @@
+/* Estilos personalizados para complementar o Bootstrap */
+body {
+    background-color: #f8f9fa;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+h2 {
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}

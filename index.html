@@ -2,83 +2,139 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Petshop Amigo Fiel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petshop Amigo Fiel - Oficial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body> 
-    <header>
-        <h1>Petshop Amigo Fiel</h1>
-        <nav>
-            <a href="#acessorios">Acessórios</a> |
-            <a href="#racoes">Rações</a> |
-            <a href="#higiene">Higiene</a> |
-            <a href="#servicos">Serviços</a>
-        </nav>
-        <hr>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Amigo Fiel</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#servicos">Serviços</a>
+                <a class="nav-link" href="#cadastro">Agendamento</a>
+            </div>
+        </div>
+    </nav>
 
-    <main>
-        <h2 id="acessorios">Acessórios</h2>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="Img/banner1.jpg" class="d-block w-100" alt="Cão feliz no banho">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Bem-vindo ao Amigo Fiel</h5>
+                    <p id="msg-boas-vendas"></p> </div>
+            </div>
+        </div>
+    </div>
 
-        <h3>Roupa para Cachorro</h3>
-        <img src="Img/Roupa cachorro.png" alt="Roupa para cachorro" width="150">
-        <p>Roupa confortável para cães de pequeno porte.</p>
-        <p>Valor: R$ 39,90</p>
+    <main class="container my-5">
+        <section id="servicos" class="mb-5">
+            <h2 class="text-center mb-4">Nossos Serviços</h2>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img src="Img/Serviços.png" alt="Ilustração de banho e tosa" width="150">
+                    <h3>Banho e Tosa</h3>
+                    <p>O melhor cuidado para o seu pet.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="Img/entrega.png" alt="Ícone de tele-busca" width="150">
+                    <h3>Tele-busca</h3>
+                    <p>Buscamos e entregamos com segurança.</p>
+                </div>
+            </div>
+        </section>
 
-        <h3>Brinquedo Mordedor</h3>
-        <img src="Img/Brinquedo.png" alt="Brinquedo mordedor" width="150">
-        <p>Brinquedo resistente para diversão do seu pet.</p>
-        <p>Valor: R$ 19,90</p>
+        <section id="cadastro" class="bg-light p-4 rounded shadow">
+            <h2 class="mb-4">Cadastro e Agendamento</h2>
+            <form id="formPet" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Nome do Dono *</label>
+                    <input type="text" class="form-control" placeholder="Seu nome completo" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">E-mail *</label>
+                    <input type="email" class="form-control" placeholder="email@exemplo.com" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">CPF</label>
+                    <input type="text" class="form-control" placeholder="000.000.000-00">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Telefone</label>
+                    <input type="tel" class="form-control" placeholder="(51) 99999-9999">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Sexo</label>
+                    <div>
+                        <input type="radio" name="sexo" value="M"> M 
+                        <input type="radio" name="sexo" value="F"> F
+                    </div>
+                </div>
 
-        <hr>
+                <hr>
+                <div class="col-md-4">
+                    <label class="form-label">Nome do Pet *</label>
+                    <input type="text" class="form-control" required>
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Raça</label>
+                    <input type="text" class="form-control">
+                </div>
+                <div class="col-md-4">
+                    <label class="form-label">Idade</label>
+                    <input type="number" class="form-control">
+                </div>
 
-        <h2 id="racoes">Rações Não Perecíveis</h2>
+                <hr>
+                <div class="col-md-6">
+                    <label class="form-label">Data e Hora *</label>
+                    <input type="datetime-local" class="form-control" required>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Tipo de Entrega</label>
+                    <select class="form-select">
+                        <option value="local">Vou levar ao local</option>
+                        <option value="tele">Solicitar Tele-busca</option>
+                    </select>
+                </div>
 
-        <h3>Ração Premium para Cães</h3>
-        <img src="Img/Ração Premium.png" alt="Ração Premium" width="150">
-        <p>Ração nutritiva indicada para cães adultos.</p>
-        <p>Valor: R$ 89,90</p>
-
-        <h3>Ração para Gatos</h3>
-        <img src="Img/Ração Gato.png" alt="Ração para Gatos" width="150">
-        <p>Alimento completo para gatos de todas as idades.</p>
-        <p>Valor: R$ 79,90</p>
-
-        <hr>
-
-        <h2 id="higiene">Higiene e Limpeza</h2>
-
-        <h3>Tapete Higiênico</h3>
-        <img src="Img/Tapete.png" alt="Tapete Higiênico" width="150">
-        <p>Tapete super absorvente para cães.</p>
-        <p>Valor: R$ 49,90</p>
-
-        <h3>Fralda para Cachorro</h3>
-        <img src="Img/Fralda.png" alt="Fralda para cachorro" width="150">
-        <p>Fralda descartável para higiene do seu pet.</p>
-        <p>Valor: R$ 34,90</p>
-
-        <hr>
-
-        <h2 id="servicos">Serviços</h2>
-
-        <h3>Banho e Tosa</h3>
-        <img src="Img/Serviços.png" alt="Serviço de Banho e Tosa" width="150">
-        <p>Serviço completo de banho para cães e gatos.</p>
-        <p>Valor: R$ 50,00</p>
-
-        <h3>Tele-busca</h3>
-        <p>Serviço de busca e entrega do pet em casa.</p>
-        <p>Valor adicional: R$ 20,00</p>
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary w-100">Finalizar Agendamento</button>
+                </div>
+            </form>
+        </section>
     </main>
 
-    <hr>
-
-    <footer>
-        <p>Petshop Amigo Fiel</p>
-        <p>Contato: (51) 99999-9999</p>
-        <p>Email: petshop@amigofiel.com</p>
-        <p>© 2026 - Todos os direitos reservados</p>
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <p>Petshop Amigo Fiel © 2026 | <span id="data-atual"></span></p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Função para mostrar saudação baseada na hora
+        function saudar() {
+            const agora = new Date();
+            const hora = agora.getHours();
+            const msg = document.getElementById('msg-boas-vendas');
+            const dataRodape = document.getElementById('data-atual');
+            
+            dataRodape.innerText = agora.toLocaleDateString();
+
+            if (hora < 12) msg.innerText = "Bom dia! Seu pet merece o melhor início de dia.";
+            else if (hora < 18) msg.innerText = "Boa tarde! Agende um banho para seu amigo.";
+            else msg.innerText = "Boa noite! Estamos prontos para atender amanhã.";
+        }
+        window.onload = saudar;
+
+        // Alerta de formulário enviado
+        document.getElementById('formPet').onsubmit = function(e) {
+            e.preventDefault();
+            alert("Agendamento realizado com sucesso! Entraremos em contato.");
+        };
+    </script>
 </body>
 </html>
